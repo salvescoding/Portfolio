@@ -27,3 +27,6 @@
 
 # My secrets
 /config/secrets.yml
+
+# Ignore credentials
+/config/credentials.yml.enc

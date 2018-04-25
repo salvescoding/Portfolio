@@ -4,5 +4,5 @@
   <h2> <%= work.title %> </h2>
   <h4> <%= work.subtitle %> </h4>
   <p> <%= work.body %> </p>
-  <%= image_tag work.thumb_image %>
+  <%= image_tag work.thumb_image unless work.thumb_image.blank? %>
 <% end %>

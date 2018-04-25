@@ -1,6 +1,6 @@
 # Portfolio Salves
 
-> Ruby on Rails 5 Application that allows users to create portfolio
+> Ruby on Rails 5 Application that allows users to create portfolio.
 
 ### Features
 

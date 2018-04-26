@@ -34,9 +34,8 @@ class WorksController < ApplicationController
   end
 
   def destroy
-    if @work.destroy
-      redirect_to works_path
-    end
+    @work.destroy
+    redirect_to works_path, notice: "Portfolio was successfully deleted"
   end
 
 

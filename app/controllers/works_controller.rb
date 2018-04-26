@@ -33,6 +33,12 @@ class WorksController < ApplicationController
     end
   end
 
+  def destroy
+    if @work.destroy
+      redirect_to works_path
+    end
+  end
+
 
 
   private

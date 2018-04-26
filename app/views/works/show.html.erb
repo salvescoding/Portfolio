@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag @work.main_image unless @work.main_image.blank? %>
+
 <p>
   <strong>Title:</strong>
   <%= @work.title %>
@@ -9,7 +11,7 @@
   <strong>Body:</strong>
   <%= @work.body %>
 </p>
-<%= image_tag @work.thumb_image unless @work.thumb_image.blank? %>
 
-<%= link_to 'Edit', edit_work_path(@work) %> |
+<br>
+<%= link_to 'Edit', edit_work_path(@work) %>
 <%= link_to 'Back', works_path %>

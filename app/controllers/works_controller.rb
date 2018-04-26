@@ -16,7 +16,7 @@ class WorksController < ApplicationController
   def create
     @work = Work.new(work_params)
     if @work.save
-      redirect_to works_path, notice: "Portfolio successfully created"
+      redirect_to works_path, notice: "Portfolio was successfully created"
     else
       render :new
     end
@@ -27,7 +27,7 @@ class WorksController < ApplicationController
 
   def update
     if @work.update(work_params)
-      redirect_to works_path, notice: "Portfolio successfully created"
+      redirect_to works_path, notice: "Portfolio was successfully updated"
     else
       render :edit
     end

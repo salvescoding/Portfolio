@@ -15,6 +15,7 @@ class WorksController < ApplicationController
 
   def new
     @work = Work.new
+    3.times { @work.technologies.build }
   end
 
   def create
@@ -48,7 +49,7 @@ class WorksController < ApplicationController
 
 
   def work_params
-    params.require(:work).permit(:title, :subtitle, :body, :main_image, :thumb_imageg)
+    params.require(:work).permit(:title, :subtitle, :body, :main_image, :thumb_imageg, technologies_attributes: [:name])
   end
 
   def set_work

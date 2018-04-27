@@ -22,5 +22,4 @@ class Work < ApplicationRecord
     where(subtitle: "Angular")
   end
 
-
 end

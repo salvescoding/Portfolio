@@ -12,6 +12,14 @@
   <%= @work.body %>
 </p>
 
+
+<h4>Technologies used</h4>
+<% @work.technologies.each do |t| %>
+<p>
+  <%= t.name %>
+</p>
+<% end %>
+
 <br>
 <%= link_to 'Edit', edit_work_path(@work) %>
 <%= link_to 'Back', works_path %>

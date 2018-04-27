@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   resources :works, except: [:show]
 
+  #custom scope
+  get 'angular', to: 'works#angular'
+
   get 'work/:id', to: 'works#show', as: 'work_show'
 
   get 'contact', to: 'pages#contact'

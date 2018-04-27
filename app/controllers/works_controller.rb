@@ -6,6 +6,10 @@ class WorksController < ApplicationController
     @work_items = Work.all
   end
 
+  def angular
+    @angular_work = Work.angular
+  end
+
   def show
   end
 

@@ -51,3 +51,13 @@ Work.create!(
     )
 
 puts "Portfolio work created"
+
+t = %w(Ruby Angular Vue)
+
+3.times do
+  Work.first.technologies.create!(name: t.sample)
+end
+
+puts "Technologies created"
+
+

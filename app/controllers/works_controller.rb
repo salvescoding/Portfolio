@@ -1,6 +1,7 @@
 class WorksController < ApplicationController
 
   before_action :set_work, only: [:show, :edit, :update, :destroy]
+  layout 'work'
 
   def index
     @work_items = Work.all

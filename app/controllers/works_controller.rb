@@ -49,7 +49,12 @@ class WorksController < ApplicationController
 
 
   def work_params
-    params.require(:work).permit(:title, :subtitle, :body, :main_image, :thumb_imageg, technologies_attributes: [:name])
+    params.require(:work).permit(:title,
+                                 :subtitle,
+                                 :body,
+                                 :main_image,
+                                 :thumb_imageg,
+                                 technologies_attributes: [:name])
   end
 
   def set_work

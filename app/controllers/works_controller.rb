@@ -12,6 +12,7 @@ class WorksController < ApplicationController
   end
 
   def show
+    @page_title = @work.title
   end
 
   def new

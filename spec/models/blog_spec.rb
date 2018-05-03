@@ -1,24 +1,30 @@
 require 'rails_helper'
 
 RSpec.describe Blog, type: :model do
-  it 'is valid with title and description' do
-    blog = create(:blog)
-    expect(blog).to be_valid
+
+  context 'Validates' do
+
+    it 'is valid with title, description and topic' do
+      blog = create(:blog)
+      expect(blog).to be_valid
+    end
+
+    it { is_expected.to validate_presence_of(:title) }
+
+    it { is_expected.to validate_presence_of(:body) }
+
+    it 'is not valid without topic' do
+      subject.title = "Anything"
+      subject.body = "Lorem ipsum"
+      expect(subject).to_not be_valid
+    end
   end
 
-  it 'is not valid without title' do
-    expect(subject).to_not be_valid
+  context 'Associations' do
+    it { is_expected.to belong_to(:topic) }
   end
 
-  it 'is not valid without body' do
-    subject.title = "Anything"
-    expect(subject).to_not be_valid
+  context 'Enums' do
+    it { is_expected.to define_enum_for(:status) }
   end
-
-  it 'is not valid without topic.id' do
-    subject.title = "Anything"
-    subject.body = "Lorem ipsum"
-    expect(subject).to_not be_valid
-  end
-
 end

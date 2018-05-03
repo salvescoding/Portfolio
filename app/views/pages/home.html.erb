@@ -3,7 +3,18 @@
 
 
 <h1>Blog posts</h1>
-<%= @posts.inspect %>
+<ul>
+  <% @posts.each do |post| %>
+    <%= post.title %>
+  <% end %>
+</ul>
 
-<h1>Skills posts</h1>
-<%= @skills.inspect %>
+<h1>Portfolio works</h1>
+<ul>
+  <% @works.each do |work| %>
+    <%= work.title %>
+  <% end %>
+</ul>
+
+<hr>
+

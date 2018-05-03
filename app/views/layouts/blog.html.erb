@@ -12,7 +12,6 @@
   </head>
 
   <body>
-    <%= render 'shared/nav' %>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
@@ -24,6 +23,7 @@
     <% end %>
     <%= yield %>
 
+    <%= render 'shared/nav', location: 'bottom' %>
     <% if session[:source] %>
       <h4>Thanks for visiting me from <%= session[:source] %> </h4>
     <% end %>

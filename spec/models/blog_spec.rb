@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Blog, type: :model do
 
-  context 'Validates' do
+  context 'Validations' do
     context 'Create with valid attributes' do
       it 'is valid with title, description and topic' do
         blog = create(:blog)

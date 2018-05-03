@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Work, type: :model do
-  context 'Validates' do
-    context 'Valid with attributes' do
+
+  context 'Validations' do
+    context 'Valid with correct params' do
       let(:work) { build(:work) }
       it 'is valid with title, description and topic' do
         expect(work).to be_valid
@@ -22,16 +23,21 @@ RSpec.describe Work, type: :model do
   end
 
   context 'Nested attributes' do
-
     context 'Accepts' do
       it { is_expected.to accept_nested_attributes_for(:technologies) }
     end
 
-    context 'Validates nested attributes name' do
-      it 'nested attributes name cant be blank' do
+    context 'Validates presence of name' do
+      it 'valid with name' do
         work = create(:work_rails)
         work.technologies.create!(name: "Ruby")
         expect(work.technologies.first).to be_valid
+      end
+
+      it 'invalid without name' do
+        work = create(:work_rails)
+        tech = work.technologies.new()
+        expect(tech).to_not be_valid
       end
     end
 

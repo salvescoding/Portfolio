@@ -3,7 +3,7 @@ class WorksController < ApplicationController
   layout "work"
 
   def index
-    @work_items = Work.all
+    @works = Work.all
   end
 
   def angular

@@ -4,12 +4,5 @@
 
 <%= link_to 'Create a new Portfolio', new_work_path %>
 
-<% @work_items.each do |work| %>
-  <h2> <%= link_to work.title, work_show_path(work) %> </h2>
-  <h4> <%= work.subtitle %> </h4>
-  <p> <%= work.body %> </p>
-  <%= image_tag work.thumb_image unless work.thumb_image.blank? %>
-  <br>
-  <%= link_to 'Edit', edit_work_path(work) %>
-  <%= link_to 'Delete', work, data: { confirm: 'Are you sure?' }, method: :delete %>
-<% end %>
+<%= render @works %>
+

@@ -812,6 +812,14 @@
         0,
         null,
         null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
         null
       ],
       "/Users/mac/code/salvescoding/Projects/Portfolio/app/helpers/blogs_helper.rb": [
@@ -997,6 +1005,6 @@
         null
       ]
     },
-    "timestamp": 1525445186
+    "timestamp": 1525529927
   }
 }

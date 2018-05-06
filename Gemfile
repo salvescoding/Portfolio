@@ -76,3 +76,6 @@ gem 'simplecov', require: false, group: :test
 # Bootstrap
 gem 'bootstrap', '~> 4.1.1'
 
+
+gem 'alves_view_tool', git: 'https://github.com/salvescoding/alves_view_tool'
+

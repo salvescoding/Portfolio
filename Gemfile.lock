@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/salvescoding/alves_view_tool
+  revision: 9a98cc928d9553c0dec68a8117e91cfa37a93ffb
+  specs:
+    alves_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -249,6 +255,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  alves_view_tool!
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.1.1)
   byebug

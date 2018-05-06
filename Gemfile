@@ -76,6 +76,8 @@ gem 'simplecov', require: false, group: :test
 # Bootstrap
 gem 'bootstrap', '~> 4.1.1'
 
-
+# View helper for copyright footer
 gem 'alves_view_tool', git: 'https://github.com/salvescoding/alves_view_tool'
 
+# Petergate authorization
+gem 'petergate', '~> 1.8', '>= 1.8.1'

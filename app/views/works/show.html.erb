@@ -21,7 +21,7 @@
 <% end %>
 
 <br>
-<%= link_to 'Edit', edit_work_path(@work) %>
+<%= link_to 'Edit', edit_work_path(@work) if logged_in?(:site_admin) %>
 <%= link_to 'Back', works_path %>
 
 

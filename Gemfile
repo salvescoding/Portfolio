@@ -33,6 +33,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# jQuery for rails
+gem 'jquery-rails'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
@@ -70,3 +73,9 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'simplecov', require: false, group: :test
+# Bootstrap
+gem 'bootstrap', '~> 4.1.1'
+
+
+gem 'alves_view_tool', git: 'https://github.com/salvescoding/alves_view_tool'
+

@@ -160,3 +160,33 @@ body {
     width: 60rem;
   }
 }
+
+/* Custom styles */
+
+.card-block {
+  color: black;
+  text-align: left;
+  padding: 10px;
+}
+
+.w-75 {
+  display: block;
+  margin: 0 auto;
+}
+
+.auth-links a {
+  color: black;
+}
+
+.form-group {
+  font-size: 13px;
+  margin-bottom: 5px;
+  label {
+    margin-bottom: 0;
+    font-size: 13px;
+  }
+}
+
+.form-control {
+  width: 80%;
+}

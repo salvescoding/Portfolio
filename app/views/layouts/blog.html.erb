@@ -4,50 +4,27 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
-
     <meta name="keywords" content="<%= @seo_keywords %>" />
-
     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <%= render 'shared/blog_nav' %>
 
-    <!-- Start of nav -->
-    <div class="blog-masthead">
-      <div class="container">
-        <nav class="nav blog-nav">
-          <a class="nav-link active" href="#">Home</a>
-          <a class="nav-link" href="#">New features</a>
-          <a class="nav-link" href="#">Press</a>
-          <a class="nav-link" href="#">New hires</a>
-          <a class="nav-link" href="#">About</a>
-        </nav>
-      </div>
-    </div>
-    <!-- End of nav -->
-
-    <!-- start of blog header -->
     <div class="blog-header">
       <div class="container">
-        <h1 class="blog-title">The Bootstrap Blog</h1>
-        <p class="lead blog-description">An example blog template built with Bootstrap.</p>
+        <h1 class="blog-title">Sergio Alves Blog</h1>
+        <p class="lead blog-description">A Blog to share knowledge and experiences</p>
+        <%= link_to 'Write a new Blog', new_blog_path if logged_in?(:site_admin) %>
       </div>
     </div>
-    <!-- end of blog header -->
 
-    <!-- start of container and row element -->
     <div class="container">
 
       <div class="row">
-    <!-- start of container and row element -->
-
-
-
-        <%= login_helper %>
 
         <%= yield %>
 
@@ -83,6 +60,7 @@
             </ol>
           </div>
         </div>
+      </div>
         <!-- end of sidebar -->
 
         <!-- start of footer -->
@@ -94,10 +72,8 @@
         </footer>
         <!-- end of footer -->
 
-        <%= render "shared/nav", location: 'bottom' %>
 
         <%= source_helper %>
-      </div>
     </div>
   </body>
 </html>

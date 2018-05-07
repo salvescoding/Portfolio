@@ -176,17 +176,29 @@ body {
 
 .auth-links a {
   color: black;
+  padding: 10px 0;
+  text-decoration: none;
+  font-weight: normal;
+  font-family: lobster;
 }
 
 .form-group {
-  font-size: 13px;
-  margin-bottom: 5px;
+  font-size: 12px;
   label {
-    margin-bottom: 0;
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 
 .form-control {
-  width: 80%;
+  width: 100%;
+}
+
+.register-page {
+  text-align: right;
+}
+
+.login > .card {
+  width: 25rem;
+  margin: 0 auto;
+  float: none;
 }

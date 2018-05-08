@@ -17,7 +17,7 @@
 
     <%= render 'shared/work_nav' %>
 
-    <%= render 'shared/work_masthead' %>
+    <%= render 'shared/work_masthead' unless logged_in?(:site_admin) %>
 
     <%= yield %>
 

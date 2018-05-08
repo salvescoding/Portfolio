@@ -1,8 +1,11 @@
-<h1>Portfolio Items</h1>
-
-<p id="notice"><%= notice %></p>
-
 <%= link_to 'Create a new Portfolio', new_work_path if logged_in?(:site_admin)%>
+<div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row">
 
-<%= render @works %>
+      <%= render @works %>
+
+    </div>
+  </div>
+</div>
 

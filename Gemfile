@@ -81,3 +81,9 @@ gem 'alves_view_tool', git: 'https://github.com/salvescoding/alves_view_tool'
 
 # Petergate authorization
 gem 'petergate', '~> 1.8', '>= 1.8.1'
+
+# Font awesome for rails
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
+
+# Pagination with Kaminari
+gem 'kaminari', '~> 1.1', '>= 1.1.1'

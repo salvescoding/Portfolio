@@ -1,27 +1,25 @@
-
-
-<%= image_tag @work.main_image %>
-
-<p>
-  <strong>Title:</strong>
-  <%= @work.title %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @work.body %>
-</p>
-
-
-<h4>Technologies used</h4>
-<% @work.technologies.each do |t| %>
-<p>
-  <%= t.name %>
-</p>
-<% end %>
-
-<br>
-<%= link_to 'Edit', edit_work_path(@work) if logged_in?(:site_admin) %>
-<%= link_to 'Back', works_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <%= image_tag @work.main_image %>
+      <br>
+      <%= link_to 'Edit', edit_work_path(@work) if logged_in?(:site_admin) %>
+    </div>
+    <div class="col-md-5">
+     <h3>
+       <%= @work.title %>
+     </h3>
+      <p>
+        <%= @work.body %>
+      </p>
+      <h5>Technologies used:</h5>
+        <% @work.technologies.each do |t| %>
+        <p>
+          <%= t.name %>
+        </p>
+        <% end %>
+    </div>
+  </div>
+</div>
 
 

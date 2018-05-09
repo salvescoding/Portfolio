@@ -4,7 +4,7 @@ class WorksController < ApplicationController
   access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :edit, :update]}, site_admin: :all
 
   def index
-    @works = Work.all
+    @works = Work.by_position
   end
 
   def angular

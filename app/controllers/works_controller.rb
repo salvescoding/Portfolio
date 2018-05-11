@@ -63,7 +63,7 @@ class WorksController < ApplicationController
                                  :subtitle,
                                  :body,
                                  :main_image,
-                                 :thumb_imageg,
+                                 :thumb_image,
                                  technologies_attributes: [:name])
   end
 

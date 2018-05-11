@@ -1,6 +1,6 @@
 <div class="col-md-4">
   <div class="card mb-4 box-shadow" data-id="<%= work.id %>">
-    <%= image_tag work.thumb_image, class: "card-img-top" unless work.thumb_image.blank? %>
+    <%= image_tag work.thumb_image.url, class: "card-img-top" unless work.thumb_image.blank? %>
     <div class="card-body">
       <p class="card-title"><%= work.title %></p>
       <p class="card-text"><%= work.subtitle %></p>

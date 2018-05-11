@@ -1,10 +1,17 @@
 class WorksController < ApplicationController
   before_action :set_work, only: [:show, :edit, :update, :destroy]
   layout "work"
-  access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :edit, :update]}, site_admin: :all
+  access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :edit, :update, :sort]}, site_admin: :all
 
   def index
-    @works = Work.all
+    @works = Work.by_position
+  end
+
+  def sort
+    params[:order].each do |k, v|
+      Work.find(v[:id]).update(position: v[:position])
+    end
+    render nothing: true
   end
 
   def angular
@@ -44,6 +51,7 @@ class WorksController < ApplicationController
     @work.destroy
     redirect_to works_path, notice: "Portfolio was successfully deleted"
   end
+
 
 
 

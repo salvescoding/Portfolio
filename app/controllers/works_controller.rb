@@ -7,6 +7,13 @@ class WorksController < ApplicationController
     @works = Work.by_position
   end
 
+  def sort
+    params[:order].each do |k, v|
+      Work.find(v[:id]).update(position: v[:position])
+    end
+    render nothing: true
+  end
+
   def angular
     @angular_work = Work.angular
   end
@@ -44,6 +51,7 @@ class WorksController < ApplicationController
     @work.destroy
     redirect_to works_path, notice: "Portfolio was successfully deleted"
   end
+
 
 
 

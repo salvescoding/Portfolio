@@ -90,3 +90,13 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 
 # Pagination with Kaminari
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
+
+# Carriewave AWS
+gem 'carrierwave-aws', '~> 1.3'
+gem 'carrierwave', '~> 1.0'
+
+# Minimagic gem
+gem 'mini_magick', '~> 4.8'
+
+# A Ruby gem to load environment variables from `.env`.
+gem 'dotenv-rails', '~> 2.4'

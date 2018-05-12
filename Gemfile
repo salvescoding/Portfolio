@@ -100,3 +100,7 @@ gem 'mini_magick', '~> 4.8'
 
 # A Ruby gem to load environment variables from `.env`.
 gem 'dotenv-rails', '~> 2.4'
+
+# Dynamic nested forms using jQuery made easy; works with formtastic, simple_form or default forms
+gem 'cocoon', '~> 1.2', '>= 1.2.11'
+

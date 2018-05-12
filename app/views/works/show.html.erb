@@ -3,7 +3,6 @@
     <div class="col-md-7">
       <%= image_tag @work.main_image.url if @work.main_image.url %>
       <br>
-      <%= link_to 'Edit', edit_work_path(@work) if logged_in?(:site_admin) %>
     </div>
     <div class="col-md-5">
      <h3>
@@ -19,6 +18,7 @@
           <%= t.name %>
         </p>
         <% end %>
+      <%= link_to 'Edit', edit_work_path(@work), class: 'btn btn-info' if logged_in?(:site_admin) %>
     </div>
   </div>
 </div>

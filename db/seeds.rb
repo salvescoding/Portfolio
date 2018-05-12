@@ -1,3 +1,5 @@
+
+
 3.times do |topic|
   Topic.create!(title: "Topic #{topic + 1}")
 
@@ -6,7 +8,7 @@ end
 
 10.times do |x|
   Blog.create!(
-    title: "My blog post #{x}",
+    title: "Blog post #{x}",
     body: "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas Letraset, las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.",
     topic_id: Topic.all.sample.id
     )
@@ -24,33 +26,15 @@ end
 puts "Skills created"
 
 
-8.times do |x|
-  o = Work.create!(
+3.times do |x|
+  Work.create!(
     title: "Portfolio #{x}",
     subtitle: "Ruby on Rails",
-    body: "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas Letraset, las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.",
-    main_image: "http://placehold.it/600x400",
-    thumb_image: "http://placehold.it/350x200"
+    body: "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años"
     )
-  puts o.main_image
-  puts o.thumb_image
+
 end
 
-Work.create!(
-    title: "Vue",
-    subtitle: "Vue Js",
-    body: "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.",
-    main_image: "http://placehold.it/600x400",
-    thumb_image: "http://placehold.it/350x200"
-    )
-
-Work.create!(
-    title: "Fisio",
-    subtitle: "Angular",
-    body: "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.",
-    main_image: "http://placehold.it/600x400",
-    thumb_image: "http://placehold.it/350x200"
-    )
 
 puts "Portfolio work created"
 

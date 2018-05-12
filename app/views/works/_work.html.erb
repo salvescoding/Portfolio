@@ -1,6 +1,6 @@
 <div class="col-md-4">
   <div class="card mb-4 box-shadow" data-id="<%= work.id %>">
-    <%= image_tag portfolio_image(work.thumb_image, 'thumb'), class: "card-img-top" %>
+      <%= image_tag work.thumb_image.url, class: "card-img-top" if work.thumb_image.url %>
     <div class="card-body">
       <p class="card-title"><%= work.title %></p>
       <p class="card-text"><%= work.subtitle %></p>

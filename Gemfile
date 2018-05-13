@@ -107,3 +107,6 @@ gem 'cocoon', '~> 1.2', '>= 1.2.11'
 # This Ruby on Rails gem allows you to easily add Growl-like notifications to your application using a jQuery plugin called 'gritter'.
 gem 'gritter', '~> 1.2'
 
+# A Ruby interface to the Twitter API.
+gem 'twitter', '~> 6.2'
+

@@ -219,10 +219,23 @@ body {
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: image-url('home_portfolio.jpg') no-repeat;
+  background: linear-gradient(-225deg, rgba(0,95,108,0.3) 0%, rgba(0,36,61,0.6) 50%), image-url('home_portfolio.jpg') no-repeat;
   background-size: cover;
 }
 
 .app-footer {
   color: white;
+}
+
+.tech-news {
+  color: black;
+  margin: 10px;
+  a {
+    color: green;
+  }
+}
+
+.tech-news > .card {
+  padding: 20px;
+  background: whitesmoke;
 }

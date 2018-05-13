@@ -1,5 +1,6 @@
 class Blog < ApplicationRecord
-  belongs_to :topic
+  #belongs_to :topic
+  has_many :comments, dependent: :destroy
   validates_presence_of :title, :body
 
   enum status: { draft: 0, published: 1 }

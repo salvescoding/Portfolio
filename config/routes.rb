@@ -6,12 +6,13 @@ Rails.application.routes.draw do
 
   #custom scope
   get 'angular', to: 'works#angular'
-
   get 'work/:id', to: 'works#show', as: 'work_show'
 
   get 'contact', to: 'pages#contact'
-
   get 'about-me', to: 'pages#about'
+  get 'tech_news', to: 'pages#tech_news'
+
+
 
   resources :blogs do
     member do

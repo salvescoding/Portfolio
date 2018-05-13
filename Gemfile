@@ -110,3 +110,6 @@ gem 'gritter', '~> 1.2'
 # A Ruby interface to the Twitter API.
 gem 'twitter', '~> 6.2'
 
+# A Ruby client library for Redis
+gem 'redis', '~> 4.0', '>= 4.0.1'
+

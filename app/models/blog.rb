@@ -7,4 +7,9 @@ class Blog < ApplicationRecord
 
   extend FriendlyId
   friendly_id :title, use: :slugged
+
+  # Custom scope
+  def self.recent_posts
+    order(created_at: :desc)
+  end
 end

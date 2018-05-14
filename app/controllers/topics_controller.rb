@@ -6,7 +6,7 @@ class TopicsController < ApplicationController
     @topics = Topic.all
   end
 
-  def show
+  def shows
 
   end
 

@@ -1,5 +1,5 @@
 class Blog < ApplicationRecord
-  #belongs_to :topic
+  belongs_to :topic
   has_many :comments, dependent: :destroy
   validates_presence_of :title, :body
 

@@ -26,9 +26,9 @@ module BlogsHelper
   def icon_status_helper(blog)
     link_to toggle_status_blog_path(blog) do
       if blog.published?
-        fa_icon 'user-secret 2x'
-      else
         fa_icon 'check 2x'
+      else
+        fa_icon 'user-secret 2x'
       end
     end
   end

@@ -2,6 +2,6 @@
   <div class="container">
     <h1 class="blog-title">Sergio Alves Blog</h1>
     <p class="lead blog-description">A Blog to share knowledge and experiences</p>
-    <%= link_to 'Write a new Blog', new_blog_path if logged_in?(:site_admin) %>
+    <%= link_to 'Write a new Blog', new_blog_path, class: 'btn btn-outline-success' if logged_in?(:site_admin) %>
   </div>
 </div>

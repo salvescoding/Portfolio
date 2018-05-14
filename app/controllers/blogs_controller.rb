@@ -4,7 +4,7 @@ class BlogsController < ApplicationController
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :update, :toggle_status]}, site_admin: :all
 
   def index
-    @blogs = Blog.recent_posts.page(params[:page]).per(5)
+    @blogs = Blog.recent_posts.page(params[:page]).per(4)
     @page_title = "Sergio Alves Blog"
   end
 
@@ -17,6 +17,7 @@ class BlogsController < ApplicationController
 
   def new
     @blog = Blog.new
+    @topics = Topic.all
   end
 
   def edit
@@ -60,6 +61,6 @@ class BlogsController < ApplicationController
     end
 
     def blog_params
-      params.require(:blog).permit(:title, :body)
+      params.require(:blog).permit(:title, :body, :topic_id)
     end
 end

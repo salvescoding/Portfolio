@@ -10,5 +10,27 @@ module BlogsHelper
     end
     topics.html_safe
   end
+
+  def icon_trash_helper(blog)
+    link_to blog, method: :delete, data: { confirm: 'Are you sure?' } do
+      fa_icon 'trash 2x'
+     end
+  end
+
+  def icon_edit_helper(blog)
+    link_to edit_blog_path(blog) do
+      fa_icon 'edit 2x'
+    end
+  end
+
+  def icon_status_helper(blog)
+    link_to toggle_status_blog_path(blog) do
+      if blog.published?
+        fa_icon 'user-secret 2x'
+      else
+        fa_icon 'check 2x'
+      end
+    end
+  end
 end
 

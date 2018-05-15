@@ -34,7 +34,7 @@ module BlogsHelper
   end
 
   def pusblished_blogs_helper
-    @blogs.select { |blog| blog.status == 'published' }
+    @blogs.published
   end
 
 

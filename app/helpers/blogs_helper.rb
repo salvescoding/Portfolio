@@ -21,9 +21,9 @@ module BlogsHelper
 
   def icon_status_helper(blog)
     if blog.published?
-      link_to fa_icon('times-circle'), toggle_status_blog_path(blog)
+      link_to fa_icon('times-circle'), toggle_status_blog_path(blog), style: 'color:red;'
     else
-      link_to fa_icon('check'), toggle_status_blog_path(blog)
+      link_to fa_icon('check'), toggle_status_blog_path(blog), style: 'color:green;'
     end
   end
 

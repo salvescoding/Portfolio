@@ -1,9 +1,7 @@
 <div class="blog-post">
   <h2 class="blog-post-title"><%= link_to blog.title, blog %></h2>
   <p class="blog-post-meta">Published: <%= distance_of_time_in_words(blog.created_at, Time.now) %></p>
-  <p>
-    <%= render 'shared/blog_actions', blog: blog %>
-  </p>
+    <%= render 'shared/blog_breadcrump', blog: blog %>
   <p>
     <%= blog.body.first(300) %>...
   </p>

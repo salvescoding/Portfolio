@@ -20,9 +20,10 @@
   </div>
 
   <div class="form-group">
-    <%= f.select :status, Blog.statuses.keys,
-                          {prompt: "Select"},
-                          {class: "form-control"} %>
+    <%= f.radio_button :status, 'draft' %>
+    <%= f.label :status, 'Draft' %>
+    <%= f.radio_button :status, 'published' %>
+    <%= f.label :status, 'Published' %>
   </div>
 
   <div class="form-group">

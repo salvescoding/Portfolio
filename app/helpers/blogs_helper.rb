@@ -1,5 +1,5 @@
 module BlogsHelper
-  def gravatar_helper(user)
+  def gravatar_helper
     image_tag "https://api.adorable.io/avatars/35/abott@.io.png", style:'border-radius:50%';
   end
 
@@ -40,6 +40,27 @@ module BlogsHelper
 
   def blogs_index_helper
     logged_in?(:site_admin) ? @blogs : pusblished_blogs_helper
+  end
+
+
+  class CodeRayify < Redcarpet::Render::HTML
+    def block_code(code, language)
+      CodeRay.scan(code, language).div
+    end
+  end
+
+  def markdown(text)
+    coderayified = CodeRayify.new(filter_html: true, hard_wrap: true)
+
+    options = {
+      fenced_code_blocks: true,
+      no_intra_emphasis: true,
+      autolink: true,
+      lax_html_blocks: true,
+    }
+
+    markdown_to_html = Redcarpet::Markdown.new(coderayified, options)
+    markdown_to_html.render(text).html_safe
   end
 end
 

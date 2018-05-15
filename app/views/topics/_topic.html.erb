@@ -1,2 +1,8 @@
-
-  <h4> <%= link_to topic.title, topic %> </h4>
+<div class="col-md-6">
+  <div class="card border-secondary mb-3" style="max-width: 18rem;">
+    <div class="card-header"><%= link_to topic.title, topic %></div>
+    <div class="card-body text-secondary">
+      <p class="card-text">This topic have <%= topic.blogs.count %> blog posts</p>
+    </div>
+  </div>
+</div>

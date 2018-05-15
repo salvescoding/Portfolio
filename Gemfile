@@ -113,3 +113,9 @@ gem 'twitter', '~> 6.2'
 # A Ruby client library for Redis
 gem 'redis', '~> 4.0', '>= 4.0.1'
 
+# A gem to implement Markdown
+gem 'redcarpet', '~> 3.3', '>= 3.3.4'
+
+# Fast and easy syntax highlighting for selected languages, written in Ruby
+gem 'coderay', '~> 1.1', '>= 1.1.2'
+

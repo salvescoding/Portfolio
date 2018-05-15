@@ -1,20 +1,13 @@
-
 <div class="col-sm-8 blog-main">
   <h2><%= @blog.title %></h2>
   <p>
     <%= @blog.body %>
   </p>
-
   <div>
-    <% if logged_in?(:site_admin) %>
-      <%= icon_status_helper(@blog) %>
-      <%= icon_edit_helper(@blog) %>
-      <%= icon_trash_helper(@blog) %>
-    <% end %>
+    <%= render 'shared/blog_actions', blog: @blog %>
   </div>
 
   <%= render 'comments/comment_form' %>
-
   <div id="comments" data-blog-id="<%= @blog.id %>">
     <%= render @blog.comments %>
   </div>

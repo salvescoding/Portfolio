@@ -32,5 +32,14 @@ module BlogsHelper
       end
     end
   end
+
+  def pusblished_blogs_helper
+    @blogs.select { |blog| blog.status == 'published' }
+  end
+
+
+  def blogs_index_helper
+    logged_in?(:site_admin) ? @blogs : pusblished_blogs_helper
+  end
 end
 

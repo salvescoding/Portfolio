@@ -12,24 +12,18 @@ module BlogsHelper
   end
 
   def icon_trash_helper(blog)
-    link_to blog, method: :delete, data: { confirm: 'Are you sure?' } do
-      fa_icon 'trash 2x'
-     end
+    link_to fa_icon('trash'), blog, method: :delete, data: { confirm: 'Are you sure?' }
   end
 
   def icon_edit_helper(blog)
-    link_to edit_blog_path(blog) do
-      fa_icon 'edit 2x'
-    end
+    link_to fa_icon('edit'), edit_blog_path(blog)
   end
 
   def icon_status_helper(blog)
-    link_to toggle_status_blog_path(blog) do
-      if blog.published?
-        fa_icon 'check 2x'
-      else
-        fa_icon 'user-secret 2x'
-      end
+    if blog.published?
+      link_to fa_icon('times-circle'), toggle_status_blog_path(blog)
+    else
+      link_to fa_icon('check'), toggle_status_blog_path(blog)
     end
   end
 

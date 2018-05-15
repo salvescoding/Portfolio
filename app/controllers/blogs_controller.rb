@@ -1,6 +1,7 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
-  before_action :set_topics, only: [:edit, :new]
+  before_action :set_sidebar_topics, except: [:create, :update, :destroy, :toggle_status ]
+
   layout 'blog'
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :update, :toggle_status]}, site_admin: :all
 
@@ -61,8 +62,8 @@ class BlogsController < ApplicationController
 
   private
 
-    def set_topics
-      @topics = Topic.all
+    def set_sidebar_topics
+      @topics_sidebar = Topic.with_blogs
     end
 
     def set_blog

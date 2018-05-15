@@ -5,7 +5,7 @@ module BlogsHelper
 
   def topic_generator
     topics = ''
-    Topic.all.limit(4).each do |topic|
+    @topics_sidebar.each do |topic|
       topics << "<a href='#{topic_path(topic)}'><p>#{topic.title}</p></a>"
     end
     topics.html_safe

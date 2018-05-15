@@ -3,11 +3,9 @@
   <h2>
     <%= @topic.title %>
   </h2>
+  <%= paginate @blogs %>
 
-  <% @topic.blogs.each do |blog| %>
-    <h3><%= link_to blog.title, blog %></h3>
-  <p>
-    <%= blog.body.first(300) %>...
-  </p>
-  <% end %>
+  <%= render blogs_index_helper %>
+
+  <%= paginate @blogs %>
 </div>

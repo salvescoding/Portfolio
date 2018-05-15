@@ -15,7 +15,6 @@ Rails.application.routes.draw do
   resources :topics, only: [:index, :show]
 
 
-
   resources :blogs do
     member do
       get :toggle_status

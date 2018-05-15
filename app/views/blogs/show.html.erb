@@ -3,6 +3,9 @@
   <p>
     <%= @blog.body %>
   </p>
+  <p>
+    <%= @blog.topic.title %>
+  </p>
   <div>
     <%= render 'shared/blog_actions', blog: @blog %>
   </div>

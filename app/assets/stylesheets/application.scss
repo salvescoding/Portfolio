@@ -23,6 +23,7 @@ a:hover {
 }
 
 
+
 /*
  * Base structure
  */
@@ -35,7 +36,8 @@ body {
 body {
   color: #fff;
   text-align: center;
-  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -104,6 +106,16 @@ body {
     float: right;
   }
 }
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: 'Merriweather', serif;
+}
+
 
 
 /*
@@ -224,6 +236,10 @@ body {
   transform: translateX(-50%) translateY(-50%);
   background: linear-gradient(-225deg, rgba(0,95,108,0.3) 0%, rgba(0,36,61,0.6) 50%), image-url('home_portfolio.jpg') no-repeat;
   background-size: cover;
+}
+
+.bg-warning {
+  background-color: DodgerBlue !important;
 }
 
 .app-footer {

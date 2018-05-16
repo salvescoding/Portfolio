@@ -1,11 +1,85 @@
-<h1>About me</h1>
-<div class="row">
-  <div class="col-md-4">
-    <%= image_tag 'profile_sergio.jpg', width: '300', alt: 'Profile image Sergio Alves' %>
-  </div>
-  <div class="col-md-8">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae fugiat minima reprehenderit amet, dolor nemo fugit distinctio nisi exercitationem quisquam maxime, quibusdam pariatur illo delectus ipsam. Consectetur explicabo, alias incidunt.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel aspernatur corporis, earum reprehenderit, tempora iure mollitia placeat, cumque quam doloribus deserunt alias aliquam, adipisci rerum dicta ea illum vero consequatur!</p>
+<div class="app-card-container">
+  <div class="card">
+    <h1>About me</h1>
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <%= image_tag 'profile_sergio.jpg',  alt: 'Profile image Sergio Alves' %>
+        <div class="skills">
+          <% @skills.each do |skill| %>
+            <div class="skill">
+              <h6><%= skill.title %></h6>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped bg-warning"
+                  role="progressbar"
+                  aria-valuenow="<%= skill.percent_utilized %>"
+                  aria-valuemax="100"
+                  style="width: <%= skill.percent_utilized %>%"
+                ></div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-8">
+        <p>Since a very young age, I have always been very creative and extremely curious.
+          After discovering my passion for web development and my interest in the tech world I couldn't get enough. I started to create small websites for friends and family.
+          Meanwhile, I also created my first full stack web app in only two weeks.
+        In a world of continuous learning, the is no room for boredness.</p>
+
+
+        <button
+            class="btn btn-outline-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#jobHistory"
+            aria-expanded="false"
+            aria-controler="jobHistory"
+          >
+            Job History
+          </button>
+
+          <button
+            class="btn btn-outline-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#education"
+            aria-expanded="false"
+            aria-controler="education"
+          >
+            Education
+          </button>
+        </p>
+
+        <p>
+          <div class="collapse" id="jobHistory">
+            <div class="card card-block">
+              Job 1
+            </div>
+            <div class="card card-block">
+              Job 2
+            </div>
+          </div>
+
+          <div class="collapse" id="education">
+            <div class="card card-block">
+              School 1
+            </div>
+            <div class="card card-block">
+              School 2
+            </div>
+            <div class="card card-block">
+              School 3
+            </div>
+          </div>
+        </p>
+
+
+
+
+      </div>
+    </div>
 
   </div>
 </div>
+

@@ -3,7 +3,7 @@
   <p class="blog-post-meta">Published: <%= distance_of_time_in_words(blog.created_at, Time.now) %></p>
     <%= render 'shared/blog_breadcrump', blog: blog %>
   <p>
-    <%= blog.body.first(300) %>...
+    <%= markdown(blog.body.first(300)) %>...
   </p>
 </div>
 

@@ -12,7 +12,8 @@
 }
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   color: #555;
 }
 
@@ -22,7 +23,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Merriweather', serif;
   font-weight: normal;
   color: #333;
 }
@@ -91,8 +92,7 @@ h6, .h6 {
 }
 .blog-title {
   margin-bottom: 0;
-  font-size: 2rem;
-  font-weight: normal;
+  font-size: 2.0rem;
 }
 .blog-description {
   font-size: 1.1rem;
@@ -101,7 +101,7 @@ h6, .h6 {
 
 @media (min-width: 40em) {
   .blog-title {
-    font-size: 3.5rem;
+    font-size: 2.3rem;
   }
 }
 
@@ -190,3 +190,11 @@ h6, .h6 {
   font-style: italic;
 }
 
+.blogcrumb i {
+  font-size: 1.25em;
+  padding: 0 3px;
+}
+
+.navblog {
+  margin-bottom: 30px;
+}

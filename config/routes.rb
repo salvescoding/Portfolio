@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'about-me', to: 'pages#about'
   get 'tech_news', to: 'pages#tech_news'
 
+  resources :topics, only: [:index, :show]
 
 
   resources :blogs do

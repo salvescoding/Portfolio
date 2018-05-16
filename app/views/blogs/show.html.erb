@@ -1,18 +1,14 @@
-
 <div class="col-sm-8 blog-main">
-  <h2><%= @blog.title %></h2>
-  <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
+  <h3><%= @blog.title %></h3>
+  <%= render 'shared/blog_breadcrump', blog: @blog %>
   <p>
-    <%= @blog.body %>
+    <%= markdown(@blog.body) %>
   </p>
 
   <%= render 'comments/comment_form' %>
-
   <div id="comments" data-blog-id="<%= @blog.id %>">
     <%= render @blog.comments %>
-
   </div>
-
 </div>
 
 

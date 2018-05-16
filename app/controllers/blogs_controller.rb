@@ -1,18 +1,24 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
+  before_action :set_sidebar_topics, except: [:create, :update, :destroy, :toggle_status ]
+
   layout 'blog'
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :update, :toggle_status]}, site_admin: :all
 
   def index
-    @blogs = Blog.page(params[:page]).per(5)
+    @blogs = Blog.recent_posts.page(params[:page]).per(4)
     @page_title = "Sergio Alves Blog"
   end
 
   def show
-    @blog = Blog.includes(:comments).friendly.find(params[:id])
-    @comment = Comment.new
-    @page_title = @blog.title
-    @seo_keywords = @blog.body
+    if logged_in?(:site_admin) || @blog.published?
+      @blog = Blog.includes(:comments).friendly.find(params[:id])
+      @comment = Comment.new
+      @page_title = @blog.title
+      @seo_keywords = @blog.body
+    else
+      redirect_to blogs_path, notice: 'You are not authorised to access this page'
+    end
   end
 
   def new
@@ -55,11 +61,16 @@ class BlogsController < ApplicationController
   end
 
   private
+
+    def set_sidebar_topics
+      @topics_sidebar = Topic.with_blogs
+    end
+
     def set_blog
       @blog = Blog.friendly.find(params[:id])
     end
 
     def blog_params
-      params.require(:blog).permit(:title, :body)
+      params.require(:blog).permit(:title, :body, :topic_id, :status)
     end
 end

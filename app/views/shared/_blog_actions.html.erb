@@ -1,0 +1,5 @@
+<% if logged_in?(:site_admin) %>
+  <%= icon_status_helper(blog) %>
+  <%= icon_edit_helper(blog) %>
+  <%= icon_trash_helper(blog) %>
+<% end %>

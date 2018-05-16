@@ -1,5 +1,5 @@
 class Blog < ApplicationRecord
-  #belongs_to :topic
+  belongs_to :topic
   has_many :comments, dependent: :destroy
   validates_presence_of :title, :body
 
@@ -7,4 +7,9 @@ class Blog < ApplicationRecord
 
   extend FriendlyId
   friendly_id :title, use: :slugged
+
+  # Custom scope
+  def self.recent_posts
+    order(created_at: :desc)
+  end
 end

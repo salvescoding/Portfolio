@@ -19,6 +19,22 @@
   }
 }
 
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: 'Merriweather', serif;
+  font-weight: normal;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #555;
+}
+
 .jumbotron p:last-child {
   margin-bottom: 0;
 }

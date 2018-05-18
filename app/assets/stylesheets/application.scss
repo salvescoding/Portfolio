@@ -103,9 +103,6 @@ body {
   .masthead-brand {
     float: left;
   }
-  .nav-masthead {
-    float: right;
-  }
 }
 
 h1, .h1,
@@ -132,12 +129,57 @@ h6, .h6 {
 }
 
 
-.centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
+.home-wrapper {
   /* bring your own prefixes */
-  transform: translate(-50%, -50%);
+  @media (max-width: 728px) {
+    margin-top: 200px;
+    h4 {
+      font-size: 18px;
+    }
+  }
+  @media (max-width: 360px) {
+    h4 {
+      font-size: 16px;
+    }
+  }
+}
+
+/* Navbar Application */
+
+.bg-light {
+  background-color: transparent !important;
+}
+
+.navbar-brand {
+  color: whitesmoke !important;
+  padding: 10px;
+}
+
+.navbar-nav {
+  a {
+    color: whitesmoke !important;
+    padding: 10px;
+  }
+}
+
+.active {
+  color: white;
+  border-bottom: 0.5px solid white;
+  @media (max-width: 728px) {
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+  }
+}
+
+
+.navbar-toggler {
+  background-color: rgba(255, 255, 255, 1) !important;
+  border-radius: 25px;
+}
+
+.navbar-light .navbar-toggler {
+  color: white;
 }
 
 /*
@@ -155,9 +197,10 @@ h6, .h6 {
 
  @media (min-width: 40em) {
   /* Pull out the header and footer */
-  .masthead {
+  .app-nav {
    position: fixed;
     top: 0;
+
   }
   .mastfoot {
     position: fixed;
@@ -242,6 +285,11 @@ h6, .h6 {
   transform: translateX(-50%) translateY(-50%);
   background: linear-gradient(-225deg, rgba(0,95,108,0.3) 0%, rgba(0,36,61,0.6) 50%), image-url('home_portfolio.jpg') no-repeat;
   background-size: cover;
+  @media (max-width: 728px) {
+    background: linear-gradient(-225deg, rgba(0,95,108,0.3) 0%, rgba(0,36,61,0.6) 50%), image-url('home_portfolio_mobile.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 .bg-warning {
@@ -285,10 +333,46 @@ h6, .h6 {
   }
   margin-top: 100px;
   margin-bottom: 50px;
+  @media (max-width: 728px) {
+    margin-top: 50px;
+    h6 {
+      font-size: 14px;
+    }
+    h1 {
+      font-size: 20px;
+    }
+    img {
+      width: 100px;
+    }
+    p {
+      margin-top: 10px;
+    }
+  }
+}
+
+
+.app-card-container > .w-75 {
+  background: transparent;
+  color: white;
+  a {
+    color: white;
+  }
+
+  @media (max-width: 728px) {
+    h3 {
+      font-size: 1.5em;
+
+    }
+  }
 }
 
 .app-card-container > .card {
   padding: 20px;
+  @media (max-width: 728px) {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 .card-block {

@@ -3,7 +3,7 @@ about = '/about-me'
 ready = ->
   Typed.new '.element',
     strings: [
-      'Welcome to Salves portfolio'
+      'Welcome to my portfolio'
       'Software development is the closest concept we have to magic.'
     ]
     typeSpeed: 30

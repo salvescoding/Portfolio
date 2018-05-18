@@ -69,35 +69,7 @@ body {
  * Header
  */
 
- .masthead {
-  margin-bottom: 2rem;
-}
 
-.masthead-brand {
-  margin-bottom: 0;
-}
-
-.nav-masthead .nav-link {
-  padding: .25rem 0;
-  font-weight: normal;
-  color: whitesmoke;
-  background-color: transparent;
-  border-bottom: .25rem solid transparent;
-}
-
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255,255,255,.25);
-}
-
-.nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
-}
-
-.nav-masthead .active {
-  color: #fff;
-  border-bottom: 0.5px solid #fff;
-}
 
 @media (min-width: 48em) {
   .masthead-brand {
@@ -162,6 +134,10 @@ h6, .h6 {
   }
 }
 
+.nav-link {
+    font-size: 14px;
+}
+
 .active {
   color: white;
   border-bottom: 0.5px solid white;
@@ -211,7 +187,6 @@ h6, .h6 {
     vertical-align: middle;
   }
   /* Handle the widths */
-  .masthead,
   .mastfoot,
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
@@ -219,10 +194,8 @@ h6, .h6 {
 }
 
 @media (min-width: 62em) {
-  .masthead,
-  .mastfoot,
   .cover-container {
-    width: 60rem;
+    width: 50rem;
   }
 }
 
@@ -303,6 +276,7 @@ h6, .h6 {
 .tech-news {
   color: black;
   margin: 10px;
+  font-size: 14px;
   a {
     color: green;
   }
@@ -318,7 +292,7 @@ h6, .h6 {
   text-align: left;
 
   img {
-    width: 200px;
+    width: 180px;
     border-radius: 50%;
     border: 1px solid black;
     display: block;
@@ -326,10 +300,17 @@ h6, .h6 {
   }
   h1 {
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
   }
   h3 {
     text-align: center;
+    font-size: 23px;
+  }
+  p {
+    font-size: 14px;
+  }
+  h6 {
+    font-size: 12px;
   }
   margin-top: 100px;
   margin-bottom: 50px;

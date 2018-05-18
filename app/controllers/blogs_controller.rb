@@ -53,10 +53,10 @@ class BlogsController < ApplicationController
   def toggle_status
     if @blog.draft?
       @blog.published!
-      redirect_to blogs_path, notice: "Status was updated"
+      redirect_to blogs_path, notice: "Blog was successfully published"
     elsif @blog.published?
       @blog.draft!
-      redirect_to blogs_path, notice: "Status was updated"
+      redirect_to blogs_path, notice: "Blog is now on draft!"
     end
   end
 

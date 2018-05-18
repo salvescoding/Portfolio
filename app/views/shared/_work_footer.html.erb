@@ -1,9 +1,12 @@
 <footer class="text-muted">
   <div class="container">
-    <p class="float-right">
-      <%= link_to 'View all portfolio items',  works_path %> /
-      <a href="#">Back to top</a>
-    </p>
-    <p><%= copyright_generator %></p>
+    <div class="float-right">
+
+        <%= link_to 'View all portfolio items',  works_path, class: "btn btn-sm btn-outline-primary" %>
+
+        <a href="#" class="btn btn-sm btn-outline-primary">Back to top</a>
+
+    </div>
+    <p class="copyright-work"><%= copyright_generator %></p>
   </div>
 </footer>

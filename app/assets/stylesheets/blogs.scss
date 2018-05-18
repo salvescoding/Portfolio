@@ -55,6 +55,7 @@ h6, .h6 {
   padding: 1rem;
   font-weight: 500;
   color: #cdddeb;
+  font-size: 15px;
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -65,6 +66,9 @@ h6, .h6 {
 /* Active state gets a caret at the bottom */
 .nav-link.active {
   color: #fff;
+  @media (max-width: 728px) {
+    float: left;
+  }
 }
 .nav-link.active:after {
   position: absolute;
@@ -92,16 +96,16 @@ h6, .h6 {
 }
 .blog-title {
   margin-bottom: 0;
-  font-size: 2.0rem;
+  font-size: 1.2rem;
 }
 .blog-description {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: #999;
 }
 
 @media (min-width: 40em) {
   .blog-title {
-    font-size: 2.3rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -144,8 +148,14 @@ h6, .h6 {
   margin-bottom: 4rem;
 }
 .blog-post-title {
-  margin-bottom: .25rem;
-  font-size: 2.5rem;
+  margin-bottom: .35rem;
+  font-size: 2.0rem;
+  color: DodgerBlue;
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 .blog-post-meta {
   margin-bottom: 1.25rem;
@@ -164,6 +174,10 @@ h6, .h6 {
   text-align: center;
   background-color: #f9f9f9;
   border-top: .05rem solid #e5e5e5;
+  p {
+    margin-bottom: 0.5em;
+    font-size: 14px;
+  }
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
@@ -172,7 +186,7 @@ h6, .h6 {
 /* Custom styles */
 
 .social-links li {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .form-control {
@@ -197,4 +211,28 @@ h6, .h6 {
 
 .navblog {
   margin-bottom: 30px;
+}
+
+.pagination {
+  a {
+    padding: 0.3em 0.6em;
+    border-radius: 10px;
+
+  }
+}
+.pagination span.disabled {
+  padding: 0.3em 0.6em;
+  border-radius: 10px;
+}
+
+.topics-sidebar {
+  p {
+    color: green;
+    font-size: 15px;
+  }
+  a {
+    text-decoration: none;
+    font-size: 15px;
+    color: green;
+  }
 }

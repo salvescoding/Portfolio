@@ -69,6 +69,17 @@ footer p {
 
 .portfolio-container {
   padding-top: 40px;
+  img {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  p {
+    font-size: 14px;
+  }
+}
+
+.card-img-top {
+  height: 300px;
 }
 
 .copyright-work {

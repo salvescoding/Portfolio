@@ -146,6 +146,9 @@ h6, .h6 {
 
 .blog-post {
   margin-bottom: 4rem;
+  p {
+    font-size: 14px;
+  }
 }
 .blog-post-title {
   margin-bottom: .35rem;
@@ -234,5 +237,15 @@ h6, .h6 {
     text-decoration: none;
     font-size: 15px;
     color: green;
+  }
+}
+
+.breadcrumb-item {
+  font-size: 14px;
+  color: green;
+  &:hover {
+    text-decoration: none;
+    color: darkgreen;
+
   }
 }

@@ -5,9 +5,9 @@
       <br>
     </div>
     <div class="col-md-5">
-     <h3>
+     <h4>
        <%= @work.title %>
-     </h3>
+     </h4>
       <p>
         <%= @work.body %>
       </p>
@@ -18,7 +18,7 @@
           <%= t.name %>
         </p>
         <% end %>
-      <%= link_to 'Edit', edit_work_path(@work), class: 'btn btn-info' if logged_in?(:site_admin) %>
+      <%= link_to 'Edit', edit_work_path(@work), class: 'btn btn-outline-secondary btn-sm' if logged_in?(:site_admin) %>
     </div>
   </div>
 </div>

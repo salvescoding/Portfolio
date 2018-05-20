@@ -95,3 +95,6 @@ Rails.application.configure do
   # Action cable configuration
   config.action_cable.allowed_request_origins = ['https://salves-portfolio.herokuapp.com/', 'http://salves-portfolio.herokuapp.com/']
   config.action_cable.url = "wss://salves-portfolio.herokuapp.com/cable"
+end
+
+

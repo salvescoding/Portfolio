@@ -249,3 +249,29 @@ h6, .h6 {
 
   }
 }
+
+.blog-main, p {
+  font-size: 14px;
+}
+
+.card-block {
+  @media (max-width: 728px) {
+    img {
+      width: 20px;
+    }
+  }
+}
+
+.card-header {
+  a {
+    font-size: 14px;
+    color: green;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.card-text {
+  font-size: 14px;
+}
